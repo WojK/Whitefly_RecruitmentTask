@@ -39,14 +39,14 @@ def async_form_page():
             return redirect(url_for('homepage'))
     return render_template('asyncForm.html')
 
+
 @flask_app.route("/opinions")
 def opinions_page():
     opinions = (CustomerOpinion.query.with_entities(CustomerOpinion.name, CustomerOpinion.text).
                 order_by(desc(CustomerOpinion.created_at)).limit(5).all())
-
-    print(opinions)
     return render_template('opinions.html', opinions=opinions)
 
 
 if __name__ == "__main__":
-    flask_app.run(debug=True)
+    #flask_app.run(debug=True)
+    flask_app.run(host='0.0.0.0')

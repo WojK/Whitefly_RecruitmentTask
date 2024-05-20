@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',path='styles/formPage.css') }}">
+
+</head>
+<body>
+<div class="form-container">
+    <form method="post" action="/opinion-async">
+        <label id="opinion_label" for="opinion">Share your opinion about Whitefly (async)</label>
+        <br>
+        <textarea
+                id="opinion"
+                name="opinion"
+                placeholder="Your opinion matters"
+                rows="12"
+                cols="80"
+                  >{{ request.form['opinion'] }}</textarea>
+        <br>
+        <label id="name" for="name">Name:</label>
+        <input type="text" name="name"
+               placeholder="Your name"
+               value="{{ request.form['name'] }}"></input>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Opinions</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/opinionsPage.css') }}">
+</head>
+<body>
+<main class="main">
+    <h1>Recent Opinions (shows up to 5 latest opinions from db)</h1>
+    <div class="opinions-container">
+        {% for opinion in opinions %}
+        <div class="opinion">
+            <p>{{ opinion.name }}:</p>
+            <div class="text">{{ opinion.text }}</div>
+        </div>
+        {% endfor %}
+    </div>
+
+</main>
+</body>
+</html>

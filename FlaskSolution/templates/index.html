@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/homepage.css') }}">
+</head>
+<body>
+    <main class="full-screen flex-col justify-center">
+        <nav>
+            <a href={{url_for('form_page')}}>Form</a>
+            <a href={{url_for('async_form_page')}}>Async Form</a>
+            <a href={{url_for('opinions_page')}}>Opinions</a>
+        </nav>
+        <div class="mt-15vh"><img id="logo" src="{{url_for('static', filename='images/logo.gif')}}"/></div>
+        <div><h1><span class="fancy">Recruitment Task</span></h1></div>
+    </main>
+</body>
+</html>

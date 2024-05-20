@@ -1,3 +1,4 @@
+import uvicorn
 from fastapi import FastAPI, Request, Depends, Form
 from fastapi.responses import HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
@@ -65,3 +66,7 @@ def create_opinion_async(name: str = Form(None), opinion: str = Form(...), db: S
     save_customer_opinion_task.delay(opinion, name)
 
     return RedirectResponse(url="/", status_code=303)
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='0.0.0.0', port=8000)

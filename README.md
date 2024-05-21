@@ -3,7 +3,7 @@
 ## Opis rozwiązania 
 
 W ramach zadania zostały przygotowane dwa serwisy z wykorzystaniem frameworku Flask oraz FastAPI. Oba serwisy implementują dwa formularze przyjmujące opinie użytkowników, które trafiają do relacyjnej bazy danych.  Jaką bazę danych wybrałem SQLite ze względu na szybkość i prostotę rozwiązania. Baza danych obsługiwana jest poprzez mapowanie obiektowo-relacyjne za pomocą narzędzia SQLAlchemy. 
-Request przyjęcia formularza w pierwszym przypadku jest obsługiwany w sposób synchroniczny, co oznacza, że dane z formularza zapisywane są do bazy danych i zwracany jest wynikowy Response z przekierowaniem na stronę główną. W przypadku drugiego formularza zadanie obsługiwane jest w sposób asynchroniczny. Zadanie zapisu do bazy danych dodawane jest do kolejki zadań za pomocą Celery gdzie brokerem jest Redis. Do obsługi zadań dodanych kolejki w systemie zostaje uruchomiony jeden demon będący procesem roboczym. 
+Request przyjęcia formularza w pierwszym przypadku jest obsługiwany w sposób synchroniczny, co oznacza, że dane z formularza zapisywane są do bazy danych i zwracany jest wynikowy Response z przekierowaniem na stronę główną. W przypadku drugiego formularza zadanie obsługiwane jest w sposób asynchroniczny. Zadanie zapisu do bazy danych dodawane jest do kolejki zadań za pomocą Celery gdzie brokerem jest Redis. Do obsługi zadań dodanych do kolejki w systemie zostaje uruchomiony jeden demon, który pracuje jako worker Celery, monitorując kolejkę i przetwarzając zadania w tle.
 
 ## Deploy 
 

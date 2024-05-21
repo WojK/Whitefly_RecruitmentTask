@@ -20,7 +20,7 @@ Do przeprowadzenia testów wykorzystano platformę Loader.io. Obiektem testów b
 
 ## Wnioski
 
-W przypadku tak prostego zadania jak zapisanie danych do lokalnie przechowywanej plikowej bazy danych nie są widoczne korzyści z zastosowania systemu kolejkowego, ze względu na nieznaczne różnicę między średnim czasem otrzymania odpowiedzi przez system. Gdyby jednak zadanie było bardziej kosztowne obliczeniowo, albo gdyby system musiałby komunikować się z bazą danych, która nie jest przechowywana lokalnie i czas połączenia byłby znaczący przypuszczam, że asynchroniczne obsługiwane takie zadania miałoby znaczący wpływ na wydajność systemu.
+W przypadku tak prostego zadania jak zapisanie danych do lokalnie przechowywanej plikowej bazy danych nie są widoczne korzyści z zastosowania systemu kolejkowego, ze względu na nieznaczne różnicę między średnim czasem otrzymania odpowiedzi od aplikacji. Gdyby jednak zadanie było bardziej kosztowne obliczeniowo, albo gdyby system musiałby komunikować się z bazą danych, która nie jest przechowywana lokalnie i czas połączenia byłby znaczący przypuszczam, że asynchroniczne obsługiwane takie zadania miałoby znaczący wpływ na wydajność systemu.
 
 ## Adresy aplikacji
 

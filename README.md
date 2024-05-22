@@ -27,4 +27,4 @@ W przypadku tak prostego zadania jak zapisanie danych do lokalnie przechowywanej
 
 FastApi: http://164.92.182.123
 
-Flask:   http://165.232.116.16 
+Flask: http://164.92.228.84
